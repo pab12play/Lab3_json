@@ -25,7 +25,7 @@ var verXML = function(){
     for (var i in paresLlaves) { 
         solo += "&lt;element&gt;<br>";
         solo += "&lt;llave&gt;"+ i +"&lt;/llave&gt;<br>";
-        solo += "&lt;tipo&gt;" + paresLlaves[i] + "&lt;/tipo&gt;<br>"; 
+        solo += "&lt;valor&gt;" + paresLlaves[i] + "&lt;/valor&gt;<br>"; 
         solo += "&lt;/element&gt;<br>";
     } 
     solo += "&lt;/diccionario&gt;<br>";
