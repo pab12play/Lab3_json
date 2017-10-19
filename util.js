@@ -10,22 +10,24 @@ var getData = function() {
 }
 
 var mostrar = function(){
-    console.clear();
-    console.log('{ "Diccionario": [ ')
+    var solo = "";
+    solo += '{ "diccionario": [ <br>';
     for (var i in paresLlaves) { 
-        console.log('{"Llave":"'+ i +'"' + ', "Valor":"' + paresLlaves[i] + '"},'); 
-    } 
-    console.log(']');
-    console.log('}')
+        solo += '{"Llave":"'+ i +'"' + ', "Valor":"' + paresLlaves[i] + '"},<br>';
+    }
+    solo += ']<br>' +'}'; 
+    document.getElementById('prueba').innerHTML = solo;
 }
 var verXML = function(){
-    console.clear();
-    console.log('<Diccionario>')
+    document.getElementById('prueba').innerHTML = "";
+    var solo ="";
+    solo += "&lt;diccionario&gt;<br>";
     for (var i in paresLlaves) { 
-        console.log('<dato>')
-        console.log('<llave>'+ i +'</llave>');
-        console.log('<valor>' + paresLlaves[i] + '</valor>'); 
-        console.log('</dato>');
+        solo += "&lt;element&gt;<br>";
+        solo += "&lt;llave&gt;"+ i +"&lt;/llave&gt;<br>";
+        solo += "&lt;tipo&gt;" + paresLlaves[i] + "&lt;/tipo&gt;<br>"; 
+        solo += "&lt;/element&gt;<br>";
     } 
-    console.log('</diccionario>');
+    solo += "&lt;/diccionario&gt;<br>";
+    document.getElementById('prueba').innerHTML = solo;
 }
